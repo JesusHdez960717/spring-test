@@ -4,6 +4,7 @@ ARG APP_HOME=/home/gradle/src
 
 COPY --chown=gradle:gradle . $APP_HOME
 WORKDIR $APP_HOME
+
 RUN gradle --configure-on-demand -x check clean build --no-daemon
 
 FROM openjdk:17-jdk-alpine
@@ -13,4 +14,4 @@ COPY --from=build /home/gradle/src/build/libs/*.jar /app/app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "$JAVA_OPTS", "-jar", "-Dserver.port=$PORT", "/app/app.jar"]
+ENTRYPOINT exec java $JAVA_OPTS -jar -Dserver.port=$PORT /app/app.jar
