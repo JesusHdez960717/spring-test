@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
-@Tag(name = "Account Controller", description = "Account")
+@Tag(name = "Test Controller", description = "Test")
 @RestController
 @RequestMapping()
 public class Controller {
@@ -12,7 +12,7 @@ public class Controller {
     @GetMapping()
     @Operation(
             summary = "Test.",
-            description = "Busca detalles de una cuenta."
+            description = "Show a 'Hellou word' text."
     )
     public String test() {
         return "Hellou world";
