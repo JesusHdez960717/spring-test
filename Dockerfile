@@ -12,6 +12,6 @@ FROM openjdk:17-jdk-alpine
 RUN mkdir /app
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/app.jar
 
-EXPOSE 8080
+EXPOSE $PORT
 
 ENTRYPOINT exec java $JAVA_OPTS -jar -Dserver.port=$PORT /app/app.jar
