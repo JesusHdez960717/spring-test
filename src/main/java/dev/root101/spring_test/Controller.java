@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "Account Controller", description = "Account")
 @RestController
-@RequestMapping("/test")
+@RequestMapping()
 public class Controller {
 
     @GetMapping()
