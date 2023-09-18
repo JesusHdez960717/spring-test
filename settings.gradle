@@ -1,0 +1,10 @@
+rootProject.name = 'spring-test'
+
+sourceControl {
+    gitRepository("https://github.com/JesusHdez960717/clean-core.git") {
+        producesModule("dev.root101.clean:clean-core")
+    }
+}
+
+//include ':clean-core'
+//project(':clean-core').projectDir = "D:\\Programming\\Java\\Projects\\clean-core" as File
