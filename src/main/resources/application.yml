@@ -14,6 +14,8 @@ spring:
     gateway:
       routes:
         - id: route1
-          uri: http://localhost:8087
+          uri: https://auth-api.root101.dev
           predicates:
-            - Path=/latest/**
+            - Path=/**
+          filters:
+            - RewritePath=/auth/(?<segment>.*), /latest/$\{segment}
