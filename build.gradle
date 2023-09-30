@@ -23,10 +23,6 @@ jar {
 dependencies {
 
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway:4.0.7'
-    implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j:3.0.3'
-    implementation 'org.springframework.cloud:spring-cloud-circuitbreaker-resilience4j:3.0.3'
-    implementation 'io.github.resilience4j:resilience4j-circuitbreaker:2.1.0'
-    implementation 'io.github.resilience4j:resilience4j-timelimiter:2.1.0'
 
     //OpenApi docs: https://springdoc.org/v2/
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
